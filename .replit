@@ -1,0 +1,14 @@
+run = "clojure -M main.clj"
+
+entrypoint = "main.clj"
+
+hidden = [".clj-kondo", ".lsp", ".config"]
+
+[nix]
+channel = "stable-22_11"
+
+[languages.clojure]
+pattern = "**/*.clj"
+
+[languages.clojure.languageServer]
+start = ["clojure-lsp"]
